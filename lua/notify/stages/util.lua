@@ -55,9 +55,9 @@ end
 -- TODO: Use direction to check border lists
 local function border_padding(direction, win_conf)
   if not win_conf.border or win_conf.border == "none" then
-    return 3
+    return 0
   end
-  return 5
+  return 2
 end
 
 ---@param windows number[]
@@ -93,7 +93,7 @@ function M.get_slot_range(direction)
   if M.DIRECTION.TOP_DOWN == direction then
     return top, bottom
   elseif M.DIRECTION.BOTTOM_UP == direction then
-    return bottom, top
+    return bottom - 3, top
   elseif M.DIRECTION.LEFT_RIGHT == direction then
     return left, right
   elseif M.DIRECTION.RIGHT_LEFT == direction then
