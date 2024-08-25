@@ -93,7 +93,7 @@ function M.get_slot_range(direction)
   if M.DIRECTION.TOP_DOWN == direction then
     return top, bottom
   elseif M.DIRECTION.BOTTOM_UP == direction then
-    return bottom, top
+    return bottom - 3, top
   elseif M.DIRECTION.LEFT_RIGHT == direction then
     return left, right
   elseif M.DIRECTION.RIGHT_LEFT == direction then
